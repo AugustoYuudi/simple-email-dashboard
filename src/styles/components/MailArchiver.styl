@@ -1,0 +1,102 @@
+.inbox
+  width 100vw
+  padding $s-medium-3 0
+
+  @media screen and (min-width: $tablet)
+    padding $s-large-3
+
+  &__datefilter-container
+    display block
+    max-width 1200px
+    margin-left $s-default
+
+    @media screen and (min-width: $tablet)
+      margin 0 auto
+
+  &__emails
+    margin-top $s-large-1
+
+    &__counter
+      display block
+      color $gray-darker
+      font-size $s-medium-2
+      font-weight bold
+      margin 0 0 $s-default $s-default
+      max-width 1200px
+
+      @media screen and (min-width: $tablet)
+        font-size $s-medium-3
+        margin 0 auto $s-default auto
+
+    .counter-separator
+      &::after
+        content ''
+        display block
+        margin-top $s-default
+        height 1px
+        background-color $gray-light
+
+    &__logo
+      display block
+      margin 130px auto 0 auto
+    
+    .mailTable
+      table-layout fixed
+      width 100%
+      max-width 1200px
+      margin 0 auto
+      
+      &__header
+        display table-caption
+        padding $s-medium-1 $s-default
+        border-top 1px solid $gray-light
+        border-bottom 1px solid $gray-light
+        background-color $gray-lighter
+        color $gray-darker
+        font-size $s-medium-1
+
+
+        // @media screen and (min-width: $tablet)
+        //   display table-header-group
+
+        &__row
+          display flex
+          align-items center
+
+          @media screen and (min-width: $tablet)
+            justify-content space-between
+
+          &__item
+            padding 0 $s-default
+            text-transform capitalize
+            border-right 1px solid $gray-light
+
+            &:hover
+              cursor pointer
+
+            @media screen and (min-width: $tablet)
+              border-right none
+              text-align left
+
+              &:nth-of-type(1)
+                width 25%
+
+              &:nth-of-type(2)
+                width 25%
+
+              &:nth-of-type(3)
+                width 40%
+
+            &__title
+              display inline-block
+
+
+            &__arrow-icon
+              width 10px
+              height 10px
+              margin-left $s-small
+              transition transform .5s ease
+              animation show .5s
+
+              &--reverse
+                transform rotate(180deg)

@@ -1,0 +1,129 @@
+.email-wrapper
+  border-bottom 1px solid $gray-light
+  overflow hidden
+
+  .email
+    padding $s-medium-1 $s-default
+    color $gray-darker
+    display flex
+    flex-wrap wrap
+    position relative
+
+    &:hover
+      cursor pointer
+      color blue
+      fill blue
+
+      .email
+        &__icon
+          fill blue
+        &__date
+          &__clip
+            fill blue
+
+    @media screen and (min-width: $tablet)
+      flex-wrap nowrap
+
+    &__icon
+      width $s-medium-1
+      height 40px
+      fill $gray-darker
+
+      @media screen and (min-width: $tablet)
+        display none
+
+    &__from
+      margin-left $s-default
+      font-weight bold
+
+      @media screen and (min-width: $tablet)
+        font-weight normal
+        width 25%
+        margin-right $s-medium-1
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+
+    &__to
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
+      margin-right $s-medium-1
+      position absolute
+      top 35px
+      left 30px
+      font-size $s-medium-1
+      width 70%
+
+      @media screen and (min-width: $tablet)
+        position static
+        font-size $s-medium-2
+        width 25%
+        margin-right $s-medium-2
+
+    &__counter
+      color #ffffff
+      padding 2px $s-small
+      background-color $gray-dark
+      border-radius 2px
+      position absolute 
+      top 35px
+      right $s-medium-2
+      font-size $s-medium-1
+
+      @media screen and (min-width: $tablet)
+        position static
+
+    &__subject
+      white-space nowrap
+      text-overflow ellipsis
+      overflow hidden
+      line-height 1.1
+      order 1
+      width 100%
+      margin-top $s-medium-1
+
+      @media screen and (min-width: $tablet)
+        order 0
+        width 40%
+        margin 0 $s-medium-2 0 $s-medium-2
+      
+    &__date
+      display flex
+      margin-left auto
+      position absolute
+      right $s-medium-1
+      white-space nowrap
+
+      @media screen and (min-width: $tablet)
+        position static
+        font-weight bold
+        color $gray-darker
+        
+      &__clip
+        width $s-medium-2
+        height $s-medium-2
+        margin-right $s-default
+        fill $gray-darker
+
+      &__text
+        &::after
+          content url('~@/assets/icon_arrow02.svg')
+          display inline-block
+          width 5px
+          height 5px
+          margin-left $s-default
+
+          @media screen and (min-width: $tablet)
+            display none
+
+  .email-body
+    max-height 0
+    overflow hidden
+    color $gray-darker
+    transition all .7s ease-in
+    width 90%
+    margin 0 auto
+
+    &.active
+      margin-bottom $s-default

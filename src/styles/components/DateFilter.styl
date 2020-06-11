@@ -1,0 +1,65 @@
+.date-filter
+  display inline-flex
+  align-items center
+  height 40px
+  border 2px solid rgba($gray-light, .6)
+  border-radius $s-default
+  margin-left $s-default
+
+    &__datepicker:nth-of-type(1)
+      margin-right $s-default
+
+    &__datepicker:nth-of-type(2)
+      margin-left $s-default
+
+  &__calendar
+    display flex
+    justify-content space-around
+    align-items center
+    height 100%
+    padding $s-default
+
+    @media screen and (min-width: $tablet)
+      padding $s-medium-2
+    
+    &__icon
+      width $s-medium-3
+      height $s-medium-3
+      fill $gray-darker
+
+      @media screen and (min-width: $tablet)
+        width $s-large-1
+        height $s-large-1
+        margin-right $s-default
+
+    &__datepicker
+      border none
+      font-size $s-medium-1
+      text-align center
+
+      @media screen and (min-width: $tablet)
+        font-size $s-medium-2
+
+      &:hover
+        cursor pointer
+
+  &__submit-button
+    width 35px
+    height 100%
+    padding 0
+    border none
+    border-left 2px solid rgba($gray-light, .6)
+    border-top-right-radius $s-default
+    border-bottom-right-radius $s-default
+    background-color $gray-lighter
+
+    @media screen and (min-width: $tablet)
+      width 45px
+
+    &:hover
+      cursor pointer
+
+    &__search-icon
+      width 50%
+      height 50%
+      fill $gray-darker
