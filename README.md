@@ -19,3 +19,8 @@ yarn build
 ```
 yarn lint
 ```
+
+### Create svg sprite
+```
+yarn svgsprite
+```
