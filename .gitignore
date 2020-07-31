@@ -22,5 +22,5 @@ pnpm-debug.log*
 *.sw?
 
 # Personal files
-totp.py
-/__pycache__
+./totp.py
+./__pycache__

@@ -1,4 +1,4 @@
-# hennge_challenge
+![Dashboard](https://raw.githubusercontent.com/AugustoYuudi/simple-email-dashboard/master/prints/dashboard.png?token=AG3WOGXXOC2KUP6LPH7L3FK7ESTUS)
 
 ## Project setup
 ```
